@@ -20,9 +20,9 @@ function Pokecard({ name, url }) {
 
   return (
     <Container>
+      <span>{card.id}</span>
       <img src={card.sprite} alt="sprite" />
       <div className="description">
-        <span># {card.id}</span>
         <strong>{name}</strong>
         <div className="types" />
       </div>
