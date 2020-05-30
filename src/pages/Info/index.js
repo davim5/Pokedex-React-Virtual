@@ -49,7 +49,6 @@ function Info() {
       <img src={pokemon.sprite} alt="sprite" />
       <h1>{pokemon.name}</h1>
       <ul>
-        <li>Speed: {pokemon.speed} </li>
         <li>Sp. Defense: {pokemon.spDefense} </li>
         <li>Sp. Attack: {pokemon.spAttack} </li>
         <li>Defense: {pokemon.defense} </li>
