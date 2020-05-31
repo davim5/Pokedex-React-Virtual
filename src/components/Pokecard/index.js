@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import api from '~/services/api';
 import { Container } from './styles';
@@ -9,6 +10,8 @@ function Pokecard({ name, url }) {
     sprite: null,
   });
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     api.get(url).then((response) => {
       setCard({
@@ -18,8 +21,14 @@ function Pokecard({ name, url }) {
     });
   });
 
+  function handleShowPokemon(id) {
+    dispatch({
+      type: 'SET_POKEMON',
+      id,
+    });
+  }
   return (
-    <Container>
+    <Container onClick={() => handleShowPokemon(card.id)}>
       <span>{card.id}</span>
       <img src={card.sprite} alt="sprite" />
       <div className="description">

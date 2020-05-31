@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import { Line } from 'rc-progress';
 import api from '~/services/api';
@@ -21,8 +22,10 @@ function Info() {
     type2: null,
   });
 
+  const selectedId = useSelector((state) => state);
+
   useEffect(() => {
-    api.get(`pokemon/2`).then((response) => {
+    api.get(`pokemon/${selectedId}`).then((response) => {
       const type2 =
         response.data.types.length > 1
           ? response.data.types[1].type.name
@@ -43,7 +46,7 @@ function Info() {
         type2,
       });
     });
-  }, []);
+  }, [selectedId]);
 
   return (
     <Container>
