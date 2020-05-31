@@ -31,7 +31,7 @@ function Main() {
       </Container>
       <Spliter />
       <Container>
-        <h1>Info</h1>
+        <h1>PokeInfo</h1>
         <Pokeinfo />
       </Container>
     </Interface>

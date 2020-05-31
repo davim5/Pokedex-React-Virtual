@@ -22,7 +22,7 @@ function Info() {
   });
 
   useEffect(() => {
-    api.get(`pokemon/3`).then((response) => {
+    api.get(`pokemon/2`).then((response) => {
       const type2 =
         response.data.types.length > 1
           ? response.data.types[1].type.name
@@ -47,9 +47,10 @@ function Info() {
 
   return (
     <Container>
-      <h3>{pokemon.id}</h3>
       <Display src={pokemon.sprite} alt="sprite" />
-      <h2>{pokemon.name}</h2>
+      <h2>
+        #{pokemon.id} {pokemon.name}
+      </h2>
       <Types>
         <strong>{pokemon.type1}</strong>
         <strong>{pokemon.type2}</strong>

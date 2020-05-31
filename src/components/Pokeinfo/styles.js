@@ -23,8 +23,15 @@ export const Types = styled.div`
 
   strong {
     border-radius: 2px;
-    background: #ccc;
-    padding: 3px 5px;
+    background: green;
+    padding: 5px 5px 1px 5px;
+    font-family: pokemon;
+    color: white;
+    border-top: 2px solid ${lighten(0.15, 'green')};
+    border-bottom: 2px solid ${darken(0.1, 'green')};
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
   }
 `;
 
