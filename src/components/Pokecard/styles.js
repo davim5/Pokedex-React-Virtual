@@ -1,6 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
-export const Container = styled.button`
+// keyframes: Utilizar pra animações
+const rotate = keyframes`
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+`;
+
+export const Container = styled.button.attrs((props) => ({
+  type: 'button',
+  loading: props.loading,
+}))`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,4 +45,19 @@ export const Container = styled.button`
       font-size: 12px;
     }
   }
+
+  img {
+    height: 96px;
+    width: 96px;
+  }
+
+  ${(props) =>
+    props.loading &&
+    css`
+      img {
+        height: 64px;
+        width: 64px;
+        animation: ${rotate} linear 2s;
+      }
+    `}
 `;

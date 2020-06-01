@@ -4,10 +4,13 @@ import { useDispatch } from 'react-redux';
 import api from '~/services/api';
 import { Container } from './styles';
 
+import pokeLoad from '~/assets/poke_loading.png';
+
 function Pokecard({ name, url }) {
   const [card, setCard] = useState({
     id: 0,
     sprite: null,
+    loading: true,
   });
 
   const dispatch = useDispatch();
@@ -17,6 +20,7 @@ function Pokecard({ name, url }) {
       setCard({
         id: response.data.id,
         sprite: response.data.sprites.front_default,
+        loading: false,
       });
     });
   });
@@ -28,9 +32,17 @@ function Pokecard({ name, url }) {
     });
   }
   return (
-    <Container onClick={() => handleShowPokemon(card.id)}>
+    <Container
+      loading={card.loading}
+      onClick={() => handleShowPokemon(card.id)}
+    >
       <span>{card.id}</span>
-      <img src={card.sprite} alt="sprite" />
+      {card.loading ? (
+        <img src={pokeLoad} alt="loading" />
+      ) : (
+        <img src={card.sprite} alt="sprite" />
+      )}
+
       <div className="description">
         <strong>{name}</strong>
         <div className="types" />

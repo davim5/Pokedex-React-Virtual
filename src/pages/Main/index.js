@@ -10,7 +10,7 @@ function Main() {
   const [pokedex, setPokedex] = useState([]);
 
   useEffect(() => {
-    api.get('pokemon').then((response) => {
+    api.get('pokemon/?offset=0&limit=150').then((response) => {
       setPokedex(response.data.results);
     });
   }, []);
