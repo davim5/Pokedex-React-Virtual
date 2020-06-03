@@ -2,6 +2,8 @@
 
 A virtual version of our original pokedex built with React.
 
+<img src="images/print_today.png">
+
 ## How to Run
 
 ### 1. Clone it!
