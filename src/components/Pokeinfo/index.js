@@ -54,9 +54,11 @@ function Info() {
       <h2>
         #{pokemon.id} {pokemon.name}
       </h2>
-      <Types>
-        <strong>{pokemon.type1}</strong>
-        <strong>{pokemon.type2}</strong>
+      <Types type1={pokemon.type1} type2={pokemon.type2}>
+        <strong className="first">{pokemon.type1}</strong>
+        {pokemon.type2 ? (
+          <strong className="second">{pokemon.type2}</strong>
+        ) : null}
       </Types>
       <Stats>
         <ul>

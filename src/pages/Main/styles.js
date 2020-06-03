@@ -6,7 +6,7 @@ export const Interface = styled.div`
   align-items: flex-end;
 `;
 
-export const Container = styled.div`
+export const ContainerR = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,18 @@ export const Spliter = styled.div`
   width: 28px;
   background: #c6343b;
   border-radius: 14px;
+`;
+
+export const ContainerL = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #dd3a43;
+  border: 15px solid #dd3a43;
+  border-radius: 8px;
+  padding: 5px;
+  width: 400px;
+  height: 600px;
+  margin-top: 50px;
 `;
