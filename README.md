@@ -2,7 +2,7 @@
 
 A virtual version of our original pokedex built with React.
 
-<img src="images/print_today.png" style="height:500px">
+<img src="images/print_today.png" style="width:500px">
 
 ## How to Run
 

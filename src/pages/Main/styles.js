@@ -28,6 +28,10 @@ export const Pokelist = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   list-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Spliter = styled.div`

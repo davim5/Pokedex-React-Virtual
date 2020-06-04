@@ -22,10 +22,12 @@ function Info() {
     type2: null,
   });
 
+  // Selected Pokemon
   const selectedId = useSelector((state) => state);
 
   useEffect(() => {
     api.get(`pokemon/${selectedId}`).then((response) => {
+      // Check if the pokemon has more than one type
       const type2 =
         response.data.types.length > 1
           ? response.data.types[1].type.name
@@ -50,12 +52,22 @@ function Info() {
 
   return (
     <Container>
-      <Display src={pokemon.sprite} alt="sprite" />
-      <h2>
-        #{pokemon.id} {pokemon.name}
-      </h2>
+      <Display>
+        {pokemon.sprite ? (
+          <>
+            <img src={pokemon.sprite} alt="sprite" />
+            <h3>
+              #{pokemon.id} {pokemon.name}
+            </h3>
+          </>
+        ) : (
+          <p>Choose your pokemon!</p>
+        )}
+      </Display>
+
       <Types type1={pokemon.type1} type2={pokemon.type2}>
         <strong className="first">{pokemon.type1}</strong>
+        {/* Render the second type only if there is a second type */}
         {pokemon.type2 ? (
           <strong className="second">{pokemon.type2}</strong>
         ) : null}
