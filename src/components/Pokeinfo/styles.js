@@ -73,8 +73,8 @@ export const Display = styled.div`
   color: #f8f8f8;
 
   padding: 15px 40px;
-  height: 200px;
-  width: 250px;
+  height: 250px;
+  width: 300px;
 
   img {
     width: 100%;
