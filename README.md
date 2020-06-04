@@ -1,10 +1,20 @@
-# Virtual Pokedex
+<h1 align="center">
+Virtual Pokedex
+</h1>
+<p align="center">A virtual version of our original pokedex built with React.</p>
 
-A virtual version of our original pokedex built with React.
+<p align="center">
+<a href="https://github.com/davim5">
+    <img alt="Made by Davi Lima" src="https://img.shields.io/badge/made%20by-Davi%20Lima-brightgreen?style=plastic">
+</a>
 
+<img alt="GitHub" src="https://img.shields.io/github/license/davim5/Pokedex-React-Virtual?style=plastic">
+
+<img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020?style=plastic">
+</p>
 <img src="images/print_today.png" style="width:500px">
 
-## How to Run
+## 🚀 Getting Started
 
 ### 1. Clone it!
 
@@ -27,4 +37,4 @@ A virtual version of our original pokedex built with React.
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<a href="https://www.buymeacoffee.com/davil5" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-red.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/davil5" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-red.png" alt="Buy Me A Coffee" style="height: 44px !important;width: 180px !important;" ></a>
