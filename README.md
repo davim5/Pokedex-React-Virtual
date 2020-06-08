@@ -14,6 +14,9 @@ Virtual Pokedex
 </p>
 <img src="images/print_today.png" style="width:500px">
 
+---
+
+
 ## 🚀 Getting Started
 
 ### 1. Clone it!
@@ -32,9 +35,41 @@ Virtual Pokedex
 
   ```yarn start```
 
-### 5. Enjoy!
+### 5. Enjoy it!
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+---
+
+## 📋 Features
+
+- [x] Show all Pokemon.
+- [x] Scroll Pokemon list.
+- [x] Pokemon loading effect.
+- [x] Type in each colors.
+- [x] Show Pokemon stats in progress bar.
+- [ ] Show Pokemon abilities.
+- [ ] Show Pokemon move list.
+- [ ] Show Pokemon information.
+- [ ] Tabs menu in the pokemon display.
+- [ ] Next and previous Pokemon buttons.
+- [ ] Put a cool background.
+- [ ] Put a cool header with links.
+- [ ] Search Pokemon by name.
+- [ ] Make it really looks like a Pokedex.
+- [ ] Change between generations.
+
+---
+
+
+## 📌 Support
+
+Reach out to me at one of the following places!
+
+- Instagram at [@davil5](https://www.instagram.com/davil5/)
+- Linkedin at [Davi Lima](https://www.linkedin.com/in/davi-lima-632b28195/)
+
 <a href="https://www.buymeacoffee.com/davil5" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-red.png" alt="Buy Me A Coffee" style="height: 44px !important;width: 180px !important;" ></a>
+
+Made with ♥ Enjoy it!
