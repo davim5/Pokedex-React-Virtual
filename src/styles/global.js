@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import Pokemon from '~/fonts/PokemonGb-RAeo.ttf';
+import Pokeballs from '~/assets/pokegrass2.jpg';
 
 export default createGlobalStyle`
 
@@ -32,6 +33,11 @@ export default createGlobalStyle`
     display: flex;
     justify-content:center;
     align-items:center;
+    background-color: #ccc;
+    background-image: url(${Pokeballs});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 `;

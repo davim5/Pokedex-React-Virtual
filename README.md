@@ -54,7 +54,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - [ ] Show Pokemon information.
 - [ ] Tabs menu in the pokemon display.
 - [ ] Next and previous Pokemon buttons.
-- [ ] Put a cool background.
+- [x] Put a cool background.
 - [ ] Put a cool header with links.
 - [ ] Search Pokemon by name.
 - [ ] Make it really looks like a Pokedex.

@@ -25,12 +25,12 @@ function Pokecard({ name, url }) {
     });
   });
 
-  function handleShowPokemon(id) {
+  const handleShowPokemon = (id) => {
     dispatch({
       type: 'SET_POKEMON',
       id,
     });
-  }
+  };
   return (
     <Container
       loading={card.loading}
