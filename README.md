@@ -49,16 +49,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - [x] Pokemon loading effect.
 - [x] Type in each colors.
 - [x] Show Pokemon stats in progress bar.
+- [x] Show Pokemon stats in progress bar (correctly).
 - [ ] Show Pokemon abilities.
 - [ ] Show Pokemon move list.
 - [ ] Show Pokemon information.
 - [ ] Tabs menu in the pokemon display.
 - [ ] Next and previous Pokemon buttons.
 - [x] Put a cool background.
-- [ ] Put a cool header with links.
+- [ ] Put a cool header with links to navigate.
 - [ ] Search Pokemon by name.
-- [ ] Make it really looks like a Pokedex.
+- [ ] Make it really look like a Pokedex.
 - [ ] Change between generations.
+- [ ] Play the pokemon cry when clicked.
 
 ---
 

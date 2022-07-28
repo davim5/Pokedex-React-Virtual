@@ -27,24 +27,58 @@ function Info() {
 
   useEffect(() => {
     api.get(`pokemon/${selectedId}`).then((response) => {
+      // Put response in a variable
+      const pokemonData = response.data;
+
+      // eslint-disable-next-line no-console
+      console.log(pokemonData.stats);
+
       // Check if the pokemon has more than one type
       const type2 =
-        response.data.types.length > 1
-          ? response.data.types[1].type.name
-          : null;
+        pokemonData.types.length > 1 ? pokemonData.types[1].type.name : null;
+
+      const pokemonStats = {
+        hp: 0,
+        attack: 0,
+        defense: 0,
+        spAttack: 0,
+        spDefense: 0,
+        speed: 0,
+      };
+
+      pokemonData.stats.map((stat) => {
+        if (stat.stat.name === 'hp') {
+          pokemonStats.hp = stat.base_stat;
+        }
+        if (stat.stat.name === 'attack') {
+          pokemonStats.attack = stat.base_stat;
+        }
+        if (stat.stat.name === 'defense') {
+          pokemonStats.defense = stat.base_stat;
+        }
+        if (stat.stat.name === 'special-attack') {
+          pokemonStats.spAttack = stat.base_stat;
+        }
+        if (stat.stat.name === 'special-defense') {
+          pokemonStats.spDefense = stat.base_stat;
+        }
+        if (stat.stat.name === 'hp') {
+          pokemonStats.speed = stat.base_stat;
+        }
+      });
 
       setPokemon({
-        id: response.data.id,
-        name: response.data.name,
-        sprite: response.data.sprites.front_default,
+        id: pokemonData.id,
+        name: pokemonData.name,
+        sprite: pokemonData.sprites.front_default,
         moves: null,
-        speed: response.data.stats[0].base_stat,
-        spDefense: response.data.stats[1].base_stat,
-        spAttack: response.data.stats[2].base_stat,
-        defense: response.data.stats[3].base_stat,
-        attack: response.data.stats[4].base_stat,
-        hp: response.data.stats[5].base_stat,
-        type1: response.data.types[0].type.name,
+        speed: pokemonStats.speed,
+        spDefense: pokemonStats.spDefense,
+        spAttack: pokemonStats.spAttack,
+        defense: pokemonStats.defense,
+        attack: pokemonStats.attack,
+        hp: pokemonStats.hp,
+        type1: pokemonData.types[0].type.name,
         type2,
       });
     });
