@@ -11,7 +11,7 @@ const rotate = keyframes`
   }
 `;
 
-export const Container = styled.button.attrs((props) => ({
+export const CardContainer = styled.button.attrs((props) => ({
   type: 'button',
   loading: props.loading,
 }))`

@@ -30,9 +30,6 @@ function Info() {
       // Put response in a variable
       const pokemonData = response.data;
 
-      // eslint-disable-next-line no-console
-      console.log(pokemonData.stats);
-
       // Check if the pokemon has more than one type
       const type2 =
         pokemonData.types.length > 1 ? pokemonData.types[1].type.name : null;
