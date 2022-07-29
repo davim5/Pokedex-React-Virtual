@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Line } from 'rc-progress';
 import api from '~/services/api';
 
-import { Container, Display, Types, Stats } from './styles';
+import { InfoContainer, Display, Types, Stats } from './styles';
 
 function Info() {
   const [pokemon, setPokemon] = useState({
@@ -43,7 +43,7 @@ function Info() {
         speed: 0,
       };
 
-      pokemonData.stats.map((stat) => {
+      pokemonData.stats.forEach((stat) => {
         if (stat.stat.name === 'hp') {
           pokemonStats.hp = stat.base_stat;
         }
@@ -82,7 +82,7 @@ function Info() {
   }, [selectedId]);
 
   return (
-    <Container>
+    <InfoContainer>
       <Display>
         {pokemon.sprite ? (
           <>
@@ -155,7 +155,7 @@ function Info() {
           </li>
         </ul>
       </Stats>
-    </Container>
+    </InfoContainer>
   );
 }
 

@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 import Pokemon from '~/fonts/PokemonGb-RAeo.ttf';
-import Pokeballs from '~/assets/pokegrass2.jpg';
+import GrassBackground from '~/assets/pokegrass2.jpg';
 
 export default createGlobalStyle`
 
 @font-face {
       font-family: Pokemon;
-       src: url(${Pokemon})
+      src: url(${Pokemon})
     }
 
 *{
@@ -17,8 +17,6 @@ export default createGlobalStyle`
     box-sizing:border-box;
 
   }
-
-
 
   *:focus{
     outline:0;
@@ -34,7 +32,7 @@ export default createGlobalStyle`
     justify-content:center;
     align-items:center;
     background-color: #ccc;
-    background-image: url(${Pokeballs});
+    background-image: url(${GrassBackground});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

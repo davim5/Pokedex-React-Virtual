@@ -10,12 +10,12 @@ Virtual Pokedex
 
 <img alt="GitHub" src="https://img.shields.io/github/license/davim5/Pokedex-React-Virtual?style=plastic">
 
-<img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020?style=plastic">
+<img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2022?style=plastic">
 </p>
-<img src="images/print_today.png" style="width:500px">
+
+<img src="/images/print_today.png" alt="printscreen from the project" style="width:600px; display: block; margin: 0 auto"/>
 
 ---
-
 
 ## 🚀 Getting Started
 

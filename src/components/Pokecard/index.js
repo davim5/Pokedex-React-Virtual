@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import api from '~/services/api';
 import { CardContainer } from './styles';
 
-import pokeLoad from '~/assets/poke_loading.png';
+// import pokeLoad from '~/assets/poke_loading.png';
 
 function Pokecard({ name, url }) {
   const [loaded, setLoaded] = useState(false);
