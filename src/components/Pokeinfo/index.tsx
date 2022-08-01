@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 // import { useSelector } from 'react-redux';
 
 import { Line } from 'rc-progress';
 import api from '../../services/api';
 
 import { InfoContainer, Display, Types, Stats } from './styles';
+import { PokemonContext } from '../../pages/Main';
 
-function Info() {
+export function Pokeinfo() {
+  const { selectedPokemonId } = useContext(PokemonContext)
   const [pokemon, setPokemon] = useState({
     id: null,
     name: '',
@@ -23,7 +25,7 @@ function Info() {
   });
 
   // Selected Pokemon
-  const selectedId = useSelector((state) => state);
+  const selectedId = selectedPokemonId;
 
   useEffect(() => {
     api.get(`pokemon/${selectedId}`).then((response) => {
@@ -158,5 +160,3 @@ function Info() {
     </InfoContainer>
   );
 }
-
-export default Info;

@@ -1,24 +1,21 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
+import { PokemonContext } from '../../pages/Main';
 
 import api from '../../services/api';
 import { CardContainer } from './styles';
 
 // import pokeLoad from '~/assets/poke_loading.png';
 
-function Pokecard({ name, url }) {
+
+
+export function Pokecard({ name, url }) {
+  const { setPokemon } = useContext(PokemonContext);
   const [loaded, setLoaded] = useState(false);
   const [card, setCard] = useState({
     id: 0,
     sprite: null,
   });
-  const [pokemon, dispatch] = useReducer((state,action) => {
-
-    if(action.type === 'SET_POKEMON') {
-      return [...state, action.payload.id]
-    }
-
-    return state
-  },[]);
+  
 
   useEffect(() => {
     if (loaded === false) {
@@ -36,13 +33,8 @@ function Pokecard({ name, url }) {
 
   const cardName = name;
 
-  const handleShowPokemon = (id) => {
-    dispatch({
-      type: 'SET_POKEMON',
-      payload: {
-        data: id,
-      },
-    });
+  const handleShowPokemon = (id:number) => {
+    setPokemon(id)
   };
 
   return (
@@ -58,5 +50,3 @@ function Pokecard({ name, url }) {
     </CardContainer>
   );
 }
-
-export default Pokecard;
