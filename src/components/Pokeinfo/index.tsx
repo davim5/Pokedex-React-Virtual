@@ -20,6 +20,13 @@ interface PokemonInfoData {
   type1: string;
   type2?: string;
 }
+interface StatAttributes {
+  name: string;
+}
+interface IStat {
+  stat: StatAttributes;
+  base_stat: number;
+}
 
 export function Pokeinfo() {
   const { selectedPokemonId } = useContext(PokemonContext)
@@ -59,14 +66,6 @@ export function Pokeinfo() {
           spDefense: 0,
           speed: 0,
         };
-
-        interface StatAttributes {
-          name: string;
-        }
-        interface IStat {
-          stat: StatAttributes;
-          base_stat: number;
-        }
         
         pokemonData.stats.forEach((stat:IStat) => {
           if (stat.stat.name === 'hp') {

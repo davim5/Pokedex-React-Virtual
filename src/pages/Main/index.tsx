@@ -10,9 +10,12 @@ interface PokemonContextType {
   selectedPokemonId: number | null
   setPokemon: (id:number) => void;
 }
-
 interface IPokemon {
   pokemonId:number;
+}
+export interface PokedexData {
+  name: string;
+  url: string;
 }
 
 function reducer( state:IPokemon, action:any ) {
@@ -25,11 +28,6 @@ function reducer( state:IPokemon, action:any ) {
 }
 
 export const PokemonContext = createContext({} as PokemonContextType)
-
-export interface PokedexData {
-  name: string;
-  url: string;
-}
 
 export function Main() {
   const [pokedex, setPokedex] = useState<PokedexData[]>([]);
