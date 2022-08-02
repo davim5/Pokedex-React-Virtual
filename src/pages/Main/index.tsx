@@ -11,7 +11,11 @@ interface PokemonContextType {
   setPokemon: (id:number) => void;
 }
 
-function reducer(state,action) {
+interface IPokemon {
+  pokemonId:number;
+}
+
+function reducer( state:IPokemon, action:any ) {
   switch(action.type){
     case 'SET_POKEMON':
       return {pokemonId: action.payload.data}
@@ -22,8 +26,13 @@ function reducer(state,action) {
 
 export const PokemonContext = createContext({} as PokemonContextType)
 
+export interface PokedexData {
+  name: string;
+  url: string;
+}
+
 export function Main() {
-  const [pokedex, setPokedex] = useState([]);
+  const [pokedex, setPokedex] = useState<PokedexData[]>([]);
   const [pokemon, dispatch] = useReducer(reducer, { pokemonId: null});
 
 const setPokemonAction = (id:number) => {

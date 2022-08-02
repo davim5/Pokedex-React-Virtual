@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { lighten, darken } from 'polished';
 
 // function to read every type and set their especific colors
-function handleTypeColor(type) {
+function handleTypeColor(type: string) {
   switch (type) {
     case 'poison':
       return '#A152A0';
@@ -86,7 +86,20 @@ export const Display = styled.div`
   }
 `;
 
-export const Types = styled.div.attrs((props) => ({
+interface TypesProps {
+  type1: string;
+  type2: string;
+};
+
+interface ITypesProps {
+  colors1: {
+    primary: string;
+    top:string;
+    bottom:string;
+  }
+};
+
+export const Types = styled.div.attrs((props:TypesProps) => ({
   colors1: {
     primary: handleTypeColor(props.type1),
     top: lighten(0.15, handleTypeColor(props.type1)),

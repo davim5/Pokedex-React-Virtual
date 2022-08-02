@@ -1,19 +1,22 @@
 import React, { useContext, useEffect, useReducer, useState } from 'react';
-import { PokemonContext } from '../../pages/Main';
+import { PokedexData, PokemonContext } from '../../pages/Main';
 
 import api from '../../services/api';
 import { CardContainer } from './styles';
 
 // import pokeLoad from '~/assets/poke_loading.png';
 
+interface PokemonCardProps {
+  id:number;
+  sprite:string;
+}
 
-
-export function Pokecard({ name, url }) {
+export function Pokecard({ name, url }:PokedexData) {
   const { setPokemon } = useContext(PokemonContext);
   const [loaded, setLoaded] = useState(false);
-  const [card, setCard] = useState({
+  const [card, setCard] = useState<PokemonCardProps>({
     id: 0,
-    sprite: null,
+    sprite: '',
   });
   
 
